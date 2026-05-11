@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import { Mail, MapPin, Clock, CheckCircle } from '@lucide/astro';
+const title = 'Contáctanos - CRSoftware Corporation';
+const pageCss = ['/css/contacto.css'];
+---
+<BaseLayout title={title} pageCss={pageCss}>
+  <Nav active="" />
+
+  <section class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="container">
+      <span class="section-tag anim-fadeup">Contáctanos</span>
+      <h1 class="section-title anim-fadeup anim-delay-1">¿Listo para <span class="grad-text">empezar?</span></h1>
+      <p class="section-sub anim-fadeup anim-delay-2">Cuéntanos tu proyecto. Respondemos en menos de 24 horas. Primera consulta completamente gratis.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info" data-reveal>
+        <h2 class="section-title" style="font-size:1.8rem;margin-bottom:32px">Múltiples formas de <span class="grad-text">contactarnos</span></h2>
+        <button class="contact-wa-btn" onclick="openWhatsApp('Hola, quiero sus servicios y solicitar una cotización.')">
+          <div class="contact-wa-icon">
+            <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div>
+            <strong>WhatsApp Directo</strong>
+            <span>+593 98 242 9029</span>
+          </div>
+          <svg class="wa-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="contact-items">
+          <div class="contact-item card accordion-item">
+            <div class="contact-item-head">
+              <div class="ci-icon"><Mail size={24} /></div>
+              <div>
+                <strong>Correo Electrónico</strong>
+                <span>ventas@crsoftwarecorp.com</span>
+              </div>
+              <button class="contact-item-toggle" aria-expanded="false" type="button">▼</button>
+            </div>
+            <div class="contact-item-details">
+              <a href="mailto:ventas@crsoftwarecorp.com">ventas@crsoftwarecorp.com</a>
+            </div>
+          </div>
+          <div class="contact-item card accordion-item">
+            <div class="contact-item-head">
+              <div class="ci-icon"><MapPin size={24} /></div>
+              <div>
+                <strong>Ubicación</strong>
+                <span>Cuenca, Azuay, Ecuador</span>
+              </div>
+              <button class="contact-item-toggle" aria-expanded="false" type="button">▼</button>
+            </div>
+            <div class="contact-item-details">
+              <p>Cuenca, Azuay, Ecuador</p>
+            </div>
+          </div>
+          <div class="contact-item card accordion-item">
+            <div class="contact-item-head">
+              <div class="ci-icon"><Clock size={24} /></div>
+              <div>
+                <strong>Horario de Atención</strong>
+                <span>Lunes – Viernes: 8:00 – 18:00</span>
+              </div>
+              <button class="contact-item-toggle" aria-expanded="false" type="button">▼</button>
+            </div>
+            <div class="contact-item-details">
+              <p>Lunes – Viernes: 8:00 – 18:00</p>
+              <p>Sábados: 9:00 – 14:00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="corp-emails card" style="margin-top:24px">
+          <p style="font-size:0.8rem;color:var(--muted);margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px">Soporte</p>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-size:0.88rem;color:var(--purple-light);display:flex;align-items:center;gap:8px"><Mail size={16} /> soporte@crsoftwarecorp.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap" data-reveal data-delay="0.2s">
+        <div class="contact-form-card card">
+          <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:24px">Envíanos un mensaje</h3>
+          <div id="form-success" class="form-success" style="display:none">
+            <div style="color:var(--purple-light);margin-bottom:12px"><CheckCircle size={48} /></div>
+            <strong>¡Mensaje enviado!</strong>
+            <p>Te contactaremos muy pronto. También puedes escribirnos por WhatsApp para una respuesta inmediata.</p>
+            <button class="btn btn-primary" style="margin-top:16px" onclick="openWhatsApp('Hola, quiero sus servicios y solicitar una cotización.')">Ir a WhatsApp</button>
+          </div>
+          <div id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" id="f-name" placeholder="Tu nombre" class="form-input" />
+              </div>
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input type="tel" id="f-phone" placeholder="+593 ..." class="form-input" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Correo electrónico</label>
+              <input type="email" id="f-email" placeholder="tu@correo.com" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label>Servicio de interés</label>
+              <select id="f-service" class="form-input">
+                <option value="">Selecciona un servicio...</option>
+                <option>Página Web</option>
+                <option>Tienda Online</option>
+                <option>Sistema ERP</option>
+                <option>Aplicación Móvil</option>
+                <option>Hosting & Dominio</option>
+                <option>Mantenimiento</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Cuéntanos sobre tu proyecto</label>
+              <textarea id="f-msg" class="form-input form-textarea" placeholder="Describe tu idea o proyecto..."></textarea>
+            </div>
+            <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="sendForm()">
+              Enviar mensaje →
+            </button>
+            <p style="text-align:center;margin-top:16px;font-size:0.82rem;color:var(--muted)">
+              O si prefieres una respuesta inmediata:
+              <button onclick="openWhatsApp('Hola, quiero sus servicios y solicitar una cotización.')" style="background:none;border:none;color:var(--purple-light);cursor:pointer;font-weight:600;font-size:0.82rem">escríbenos por WhatsApp →</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+</BaseLayout>

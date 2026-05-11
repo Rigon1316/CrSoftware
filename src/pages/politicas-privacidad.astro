@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+const title = 'Política de Privacidad - CRSoftware';
+const pageCss = [];
+---
+<BaseLayout title={title} pageCss={pageCss}>
+  <Nav active="" />
+
+  <section class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="container">
+      <span class="section-tag anim-fadeup">Política de Privacidad</span>
+      <h1 class="section-title anim-fadeup anim-delay-1">Tus datos <span class="grad-text">están seguros</span></h1>
+      <p class="section-sub anim-fadeup anim-delay-2">En CRSoftware Corporation tratamos tu información con responsabilidad y transparencia.</p>
+    </div>
+  </section>
+
+  <section class="content-section" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <div class="card" style="padding: 32px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+        <h2>1. Información que recopilamos</h2>
+        <p>Recopilamos solo los datos que necesitas proporcionarnos para responder tus consultas y ofrecerte nuestros servicios: nombre, correo electrónico, teléfono y detalles de tu proyecto.</p>
+        <h2>2. Uso de la información</h2>
+        <p>Utilizamos tus datos para contactarte, enviar cotizaciones y brindar soporte. No compartimos tu información con terceros sin tu consentimiento explícito.</p>
+        <h2>3. Seguridad</h2>
+        <p>Mantenemos medidas de seguridad técnicas y administrativas para proteger tus datos contra accesos no autorizados y pérdidas.</p>
+        <h2>4. Derechos</h2>
+        <p>Puedes solicitar acceso, corrección o eliminación de tus datos en cualquier momento escribiendo a <a href="mailto:crsoftwarecorporation@gmail.com">crsoftwarecorporation@gmail.com</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+</BaseLayout>

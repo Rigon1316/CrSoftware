@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+const title = 'Quiénes Somos - CRSoftware Corporation';
+const pageCss = ['/css/quienes.css'];
+---
+<BaseLayout title={title} pageCss={pageCss}>
+  <Nav active="quienes" />
+
+  <section class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="container">
+      <span class="section-tag anim-fadeup">Nuestra Historia</span>
+      <h1 class="section-title anim-fadeup anim-delay-1">Quiénes <span class="grad-text">Somos</span></h1>
+      <p class="section-sub anim-fadeup anim-delay-2">Una empresa dedicada a transformar ideas en soluciones digitales de alto impacto, comprometida con la innovación y la calidad.</p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container about-grid">
+      <div class="about-img-wrap" data-reveal>
+        <div class="about-img-card">
+          <img src="/images/quienessomos.png" alt="Quiénes somos" class="about-img-main" />
+        </div>
+      </div>
+      <div class="about-text" data-reveal data-delay="0.2s">
+        <span class="section-tag">Nuestra Empresa</span>
+        <h2 class="section-title">CRSoftware <span class="grad-text">Corporation</span></h2>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:16px">
+          En CRSoftware Corporation somos una empresa dedicada al desarrollo de soluciones digitales innovadoras y modernas. Nos especializamos en la creación de páginas web profesionales, diseñadas para ayudar a negocios, emprendimientos y empresas a fortalecer su presencia en internet.
+        </p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:32px">
+          Nuestro objetivo es combinar creatividad, tecnología y compromiso para ofrecer proyectos de calidad, adaptados a las necesidades de cada cliente. Buscamos expandir nuestros servicios hacia sistemas ERP, aplicaciones móviles y software empresarial.
+        </p>
+        <a href="/contacto.html" class="btn btn-primary">Trabajemos juntos →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mv-section">
+    <div class="container">
+      <div class="section-center" data-reveal>
+        <span class="section-tag">Fundamentos</span>
+        <h2 class="section-title">Misión & <span class="grad-text">Visión</span></h2>
+      </div>
+      <div class="mv-grid">
+        <div class="mv-card card" data-reveal data-delay="0s">
+          <h3>Misión</h3>
+          <p>Brindar soluciones tecnológicas innovadoras mediante el desarrollo de páginas web modernas, eficientes y personalizadas, ayudando a empresas y emprendedores a crecer en el mundo digital.</p>
+          <p style="margin-top:12px">En el futuro, expandir nuestros servicios hacia el desarrollo de sistemas ERP, aplicaciones móviles y software empresarial de alta calidad, ofreciendo siempre compromiso, creatividad y tecnología de vanguardia.</p>
+        </div>
+        <div class="mv-card card" data-reveal data-delay="0.2s">
+          <h3>Visión</h3>
+          <p>Ser una empresa líder en desarrollo de software y soluciones digitales a nivel nacional e internacional, reconocida por la innovación, calidad y confianza en cada proyecto.</p>
+          <p style="margin-top:12px">Aspiramos a que CRSoftware Corporation evolucione hasta convertirse en una compañía tecnológica integral especializada en páginas web, sistemas ERP, aplicaciones móviles y nuevas tecnologías.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section">
+    <div class="container">
+      <div class="section-center" data-reveal>
+        <span class="section-tag">Nuestros Valores</span>
+        <h2 class="section-title">Lo que nos <span class="grad-text">define</span></h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-item" data-reveal data-delay="0s">
+          <div class="value-num">01</div>
+          <h3>Innovación</h3>
+          <p>Siempre a la vanguardia de las nuevas tecnologías y tendencias digitales.</p>
+        </div>
+        <div class="value-item" data-reveal data-delay="0.1s">
+          <div class="value-num">02</div>
+          <h3>Calidad</h3>
+          <p>Cada proyecto refleja nuestro compromiso con la excelencia y el detalle.</p>
+        </div>
+        <div class="value-item" data-reveal data-delay="0.2s">
+          <div class="value-num">03</div>
+          <h3>Compromiso</h3>
+          <p>Entregamos lo prometido, en el tiempo acordado, con dedicación total.</p>
+        </div>
+        <div class="value-item" data-reveal data-delay="0.3s">
+          <div class="value-num">04</div>
+          <h3>Creatividad</h3>
+          <p>Soluciones únicas y personalizadas que destacan en el mercado digital.</p>
+        </div>
+        <div class="value-item" data-reveal data-delay="0.4s">
+          <div class="value-num">05</div>
+          <h3>Confianza</h3>
+          <p>Relaciones duraderas basadas en transparencia y resultados comprobables.</p>
+        </div>
+        <div class="value-item" data-reveal data-delay="0.5s">
+          <div class="value-num">06</div>
+          <h3>Colaboración</h3>
+          <p>Trabajamos de la mano con el cliente para lograr sus objetivos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+</BaseLayout>

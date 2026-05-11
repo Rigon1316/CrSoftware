@@ -1,0 +1,19 @@
+{
+  "name": "crsoftware",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@lucide/astro": "^1.14.0",
+    "astro": "^4.16.18",
+    "simple-icons": "^16.19.0"
+  }
+}

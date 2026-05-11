@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import { 
+  Globe, ShoppingCart, Settings, Smartphone, Cloud, Wrench, 
+  Check, X, Star 
+} from '@lucide/astro';
+const title = 'Servicios - CRSoftware Corporation';
+const pageCss = ['/css/servicios.css'];
+---
+<BaseLayout title={title} pageCss={pageCss}>
+  <Nav active="servicios" />
+
+  <section class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="container">
+      <span class="section-tag anim-fadeup">Nuestros Servicios</span>
+      <h1 class="section-title anim-fadeup anim-delay-1">Todo lo que <span class="grad-text">necesitas</span></h1>
+      <p class="section-sub anim-fadeup anim-delay-2">Desde una landing page hasta un sistema empresarial completo. Tenemos la solución perfecta para tu negocio.</p>
+    </div>
+  </section>
+
+  <section class="serv-main">
+    <div class="container">
+      <div class="serv-grid">
+        <div class="serv-card card" data-reveal data-delay="0s">
+          <div class="serv-icon-wrap serv-purple"><Globe size={32} /></div>
+          <div class="serv-content">
+            <h3>Páginas Web Profesionales</h3>
+            <p>Sitios web modernos, rápidos y completamente responsivos optimizados para buscadores. Desde landing pages hasta portales completos.</p>
+            <ul class="serv-features">
+              <li><Check size={16} /> Diseño personalizado</li>
+              <li><Check size={16} /> Optimización SEO</li>
+              <li><Check size={16} /> 100% Responsivo</li>
+              <li><Check size={16} /> Alta velocidad</li>
+            </ul>
+            <button class="btn btn-primary serv-btn" onclick="openWhatsApp('Hola, quiero información sobre el servicio de Páginas Web Profesionales.')">
+              Solicitar cotización
+            </button>
+          </div>
+        </div>
+
+        <div class="serv-card card featured" data-reveal data-delay="0.1s">
+          <div class="featured-badge"><Star size={14} /> Más Popular</div>
+          <div class="serv-icon-wrap serv-cyan"><ShoppingCart size={32} /></div>
+          <div class="serv-content">
+            <h3>Tiendas Online (E-commerce)</h3>
+            <p>Vende tus productos en internet con una tienda completa, segura y con pasarela de pagos integrada. Empieza a vender hoy.</p>
+            <ul class="serv-features">
+              <li><Check size={16} /> Catálogo de productos</li>
+              <li><Check size={16} /> Pagos en línea</li>
+              <li><Check size={16} /> Panel de administración</li>
+              <li><Check size={16} /> Gestión de pedidos</li>
+            </ul>
+            <button class="btn btn-primary serv-btn" onclick="openWhatsApp('Hola, quiero información sobre el servicio de Tiendas Online.')">
+              Solicitar cotización
+            </button>
+          </div>
+        </div>
+
+        <div class="serv-card card" data-reveal data-delay="0.2s">
+          <div class="serv-icon-wrap serv-purple"><Settings size={32} /></div>
+          <div class="serv-content">
+            <h3>Sistemas ERP</h3>
+            <p>Software empresarial completo para gestionar inventario, ventas, contabilidad, recursos humanos y más desde un solo lugar.</p>
+            <ul class="serv-features">
+              <li><Check size={16} /> Módulos personalizables</li>
+              <li><Check size={16} /> Reportes en tiempo real</li>
+              <li><Check size={16} /> Multi-usuario</li>
+              <li><Check size={16} /> Acceso en la nube</li>
+            </ul>
+            <button class="btn btn-primary serv-btn" onclick="openWhatsApp('Hola, quiero información sobre el servicio de Sistemas ERP.')">
+              Solicitar cotización
+            </button>
+          </div>
+        </div>
+
+        <div class="serv-card card" data-reveal data-delay="0s">
+          <div class="serv-icon-wrap serv-cyan"><Smartphone size={32} /></div>
+          <div class="serv-content">
+            <h3>Aplicaciones Móviles</h3>
+            <p>Apps nativas y multiplataforma para iOS y Android. Conecta con tus clientes desde cualquier dispositivo móvil.</p>
+            <ul class="serv-features">
+              <li><Check size={16} /> iOS & Android</li>
+              <li><Check size={16} /> UI/UX moderno</li>
+              <li><Check size={16} /> Notificaciones push</li>
+              <li><Check size={16} /> Integración con APIs</li>
+            </ul>
+            <button class="btn btn-primary serv-btn" onclick="openWhatsApp('Hola, quiero información sobre el servicio de Aplicaciones Móviles.')">
+              Solicitar cotización
+            </button>
+          </div>
+        </div>
+
+        <div class="serv-card card" data-reveal data-delay="0.1s">
+          <div class="serv-icon-wrap serv-purple"><Cloud size={32} /></div>
+          <div class="serv-content">
+            <h3>Hosting & Dominios</h3>
+            <p>Alojamiento web profesional, rápido y seguro. Registro y gestión de dominios. Tu sitio disponible 24/7.</p>
+            <ul class="serv-features">
+              <li><Check size={16} /> 99.9% Uptime</li>
+              <li><Check size={16} /> SSL incluido</li>
+              <li><Check size={16} /> Backups automáticos</li>
+              <li><Check size={16} /> Soporte técnico</li>
+            </ul>
+            <button class="btn btn-primary serv-btn" onclick="openWhatsApp('Hola, quiero información sobre el servicio de Hosting y Dominios.')">
+              Solicitar cotización
+            </button>
+          </div>
+        </div>
+
+        <div class="serv-card card" data-reveal data-delay="0.2s">
+          <div class="serv-icon-wrap serv-cyan"><Wrench size={32} /></div>
+          <div class="serv-content">
+            <h3>Mantenimiento de Software</h3>
+            <p>Mantén tu sitio o aplicación actualizada, segura y funcionando perfectamente. Planes mensuales disponibles.</p>
+            <ul class="serv-features">
+              <li><Check size={16} /> Actualizaciones periódicas</li>
+              <li><Check size={16} /> Corrección de errores</li>
+              <li><Check size={16} /> Monitoreo 24/7</li>
+              <li><Check size={16} /> Mejoras continuas</li>
+            </ul>
+            <button class="btn btn-primary serv-btn" onclick="openWhatsApp('Hola, quiero información sobre el servicio de Mantenimiento de Software.')">
+              Solicitar cotización
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans-section">
+    <div class="container">
+      <div class="section-center" data-reveal>
+        <span class="section-tag">Precios</span>
+        <h2 class="section-title">Planes <span class="grad-text">accesibles</span></h2>
+        <p class="section-sub" style="margin:0 auto">Elige el plan que mejor se adapte a tu proyecto o contáctanos para una cotización personalizada.</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card card" data-reveal data-delay="0s">
+          <div class="plan-badge"><Star size={14} /> Recomendado</div>
+          <div class="plan-header">
+            <h3>Básico</h3>
+            <div class="plan-price">Desde <span>$350</span></div>
+            <p>Ideal para emprendedores</p>
+          </div>
+          <ul class="plan-features">
+            <li><Check size={16} /> Página web de 2 a 4 páginas</li>
+            <li><Check size={16} /> Diseño responsivo</li>
+            <li><Check size={16} /> Formulario de contacto</li>
+            <li><Check size={16} /> Integración WhatsApp</li>
+            <li><Check size={16} /> 30 días de soporte</li>
+            <li class="disabled"><X size={16} /> E-commerce</li>
+            <li class="disabled"><X size={16} /> Sistema ERP</li>
+          </ul>
+          <button class="btn btn-secondary" style="width:100%" onclick="openWhatsApp('Hola, me interesa el Plan Básico. ¿Pueden darme más información?')">
+            Solicitar Plan
+          </button>
+        </div>
+
+        <div class="plan-card card plan-featured" data-reveal data-delay="0.15s">
+          <div class="plan-header">
+            <h3>Empresarial</h3>
+            <div class="plan-price">Desde <span>$500</span></div>
+            <p>Para negocios en crecimiento</p>
+          </div>
+          <ul class="plan-features">
+            <li><Check size={16} /> Sitio web completo de 5 a 8 páginas</li>
+            <li><Check size={16} /> Tienda online o ERP básico</li>
+            <li><Check size={16} /> Pasarela de pagos</li>
+            <li><Check size={16} /> Panel de administración</li>
+            <li><Check size={16} /> SEO optimizado</li>
+            <li><Check size={16} /> 3 meses de soporte</li>
+            <li><Check size={16} /> Hosting incluido 1 año</li>
+          </ul>
+          <button class="btn btn-primary" style="width:100%" onclick="openWhatsApp('Hola, me interesa el Plan Empresarial. ¿Pueden darme más información?')">
+            Solicitar Plan
+          </button>
+        </div>
+
+        <div class="plan-card card" data-reveal data-delay="0.3s">
+          <div class="plan-header">
+            <h3>Personalizado</h3>
+            <div class="plan-price"><span>A medida</span></div>
+            <p>Para proyectos únicos</p>
+          </div>
+          <ul class="plan-features">
+            <li><Check size={16} /> Todo lo del plan Empresarial</li>
+            <li><Check size={16} /> Sistema ERP completo</li>
+            <li><Check size={16} /> App móvil incluida</li>
+            <li><Check size={16} /> Integraciones personalizadas</li>
+            <li><Check size={16} /> Soporte prioritario 24/7</li>
+            <li><Check size={16} /> Actualizaciones continuas</li>
+            <li><Check size={16} /> Capacitación del equipo</li>
+          </ul>
+          <button class="btn btn-secondary" style="width:100%" onclick="openWhatsApp('Hola, me interesa un desarrollo personalizado. ¿Pueden asesorarme?')">
+            Solicitar Cotización
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <div class="container">
+      <div class="section-center" data-reveal>
+        <span class="section-tag">Portafolio</span>
+        <h2 class="section-title">Proyectos <span class="grad-text">realizados</span></h2>
+      </div>
+      <div class="portfolio-grid">
+        <a href="https://www.gestcore.com/" target="_blank" rel="noopener noreferrer" class="portfolio-item card" data-reveal data-delay="0s">
+          <div class="portfolio-img">
+            <img src="/images/proyecto1.png" alt="Gestcore - Proyecto Realizado" onerror="this.parentElement.innerHTML='<div class=\'portfolio-placeholder\'><div style=\'margin-bottom:8px\'><Globe size={32} /></div>Proyecto real</div>'" />
+          </div>
+          <div class="portfolio-info">
+            <h3>Gestcore</h3>
+            <p>Plataforma empresarial para gestionar procesos y ventas.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+</BaseLayout>

@@ -1,0 +1,200 @@
+---
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Column 1: Logo and Social -->
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="/logo.png" alt="CRSoftware Logo" class="f-logo" />
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon">f</a>
+          <a href="#" class="social-icon">in</a>
+          <a href="#" class="social-icon">li</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Pages -->
+      <div class="footer-col">
+        <h3>PÁGINAS</h3>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#conoce-mas">Conoce más</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Services -->
+      <div class="footer-col">
+        <h3>SERVICIOS</h3>
+        <ul>
+          <li><a href="#servicios">Páginas Web</a></li>
+          <li><a href="#servicios">Aplicaciones Web</a></li>
+          <li><a href="#servicios">UI/UX Design</a></li>
+          <li><a href="#servicios">SEO & Optimización</a></li>
+          <li><a href="#servicios">Mantenimiento</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="footer-col">
+        <h3>CONTACTO</h3>
+        <ul class="contact-info">
+          <li>+593 98 242 9029</li>
+          <li>crsoftwarecorporation@gmail.com</li>
+          <li>Cuenca, Ecuador</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 CRSoftware Corporation. Todos los derechos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #020617;
+    color: #f8fafc;
+    padding: 5rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .footer-logo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .f-logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .footer-col h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    color: #94a3b8;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-col ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+  }
+
+  .footer-col ul li a:hover {
+    color: var(--primary);
+  }
+
+  .contact-info li {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+  }
+
+  .social-icon:hover {
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-3px);
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-legal a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-legal a:hover {
+    color: #cbd5e1;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .footer-logo {
+      justify-content: center;
+    }
+    .social-links {
+      justify-content: center;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .footer-legal {
+      justify-content: center;
+    }
+  }
+</style>

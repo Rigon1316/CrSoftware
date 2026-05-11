@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import TechStack from '../components/TechStack.astro';
+---
+
+<Layout title="CR Software | Innovación en Desarrollo de Software">
+	<Navbar />
+	<main>
+		<section id="inicio" class="tab-content active">
+			<Hero />
+			<TechStack />
+		</section>
+		<section id="servicios" class="tab-content">
+			<Services />
+		</section>
+		<section id="conoce-mas" class="tab-content">
+			<About />
+			<Projects />
+		</section>
+		<section id="contacto" class="tab-content">
+			<Contact />
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style is:global>
+	.tab-content {
+		display: none;
+		animation: fadeIn 0.5s ease-out;
+	}
+	.tab-content.active {
+		display: block;
+	}
+
+	@keyframes fadeIn {
+		from { opacity: 0; transform: translateY(10px); }
+		to { opacity: 1; transform: translateY(0); }
+	}
+</style>
+
+<script>
+	function initTabs() {
+		const navLinks = document.querySelectorAll('a[href^="#"]');
+		const tabs = document.querySelectorAll('.tab-content');
+
+		function showTab(tabId: string) {
+			// Remove # if present
+			const id = tabId.replace('#', '');
+			
+			const targetTab = document.getElementById(id);
+			if (!targetTab) return;
+
+			tabs.forEach(tab => {
+				tab.classList.remove('active');
+			});
+			targetTab.classList.add('active');
+
+			// Update active link state in navbar
+			document.querySelectorAll('.nav-links a').forEach(link => {
+				const hrefAttr = link.getAttribute('href');
+				if (hrefAttr) {
+					const href = hrefAttr.replace('#', '');
+					if (href === id) {
+						link.classList.add('active-link');
+					} else {
+						link.classList.remove('active-link');
+					}
+				}
+			});
+
+			// Scroll to top
+			window.scrollTo(0, 0);
+		}
+
+		navLinks.forEach(link => {
+			link.addEventListener('click', (e) => {
+				const href = link.getAttribute('href');
+				if (href && href.startsWith('#')) {
+					e.preventDefault();
+					showTab(href);
+					// Update URL without jump
+					history.pushState(null, '', href);
+				}
+			});
+		});
+
+		// Handle initial hash or back/forward
+		window.addEventListener('popstate', () => {
+			showTab(window.location.hash || '#inicio');
+		});
+
+		// Check initial hash
+		if (window.location.hash) {
+			showTab(window.location.hash);
+		}
+	}
+
+	document.addEventListener('DOMContentLoaded', initTabs);
+</script>

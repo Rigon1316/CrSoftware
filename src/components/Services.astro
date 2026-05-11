@@ -1,0 +1,436 @@
+---
+const services = [
+  {
+    title: "Páginas Web Profesionales",
+    description: "Sitios web modernos, rápidos y completamente responsivos optimizados para buscadores. Desde landing pages hasta portales completos.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
+    popular: true,
+    features: [
+      "Diseño personalizado",
+      "Optimización SEO",
+      "100% Responsivo",
+      "Alta velocidad"
+    ]
+  },
+  {
+    title: "Aplicaciones Web",
+    description: "Sistemas complejos y escalables diseñados para optimizar los procesos de tu negocio.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>`,
+    features: [
+      "Diseño personalizado",
+      "Arquitectura escalable",
+      "API Integration",
+      "Máxima seguridad"
+    ]
+  },
+  {
+    title: "UI/UX Design",
+    description: "Diseño de interfaces intuitivas y experiencias de usuario memorables que enamoran a tus clientes.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"></circle><circle cx="17.5" cy="10.5" r=".5"></circle><circle cx="8.5" cy="7.5" r=".5"></circle><circle cx="6.5" cy="12.5" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.688-1.688h1.938c3.102 0 5.625-2.523 5.625-5.625 0-4.96-4.39-8.75-10-8.75Z"></path></svg>`,
+    features: [
+      "Prototipado interactivo",
+      "User Testing",
+      "Diseño Centrado en Usuario",
+      "Brand Identity"
+    ]
+  },
+  {
+    title: "SEO & Optimización",
+    description: "Mejoramos la visibilidad y velocidad de tu sitio web para alcanzar los primeros puestos en Google.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.3-4.3"></path><circle cx="10" cy="10" r="7"></circle><path d="M10 7v6"></path><path d="M7 10h6"></path></svg>`,
+    features: [
+      "Análisis de Keywords",
+      "Optimización On-Page",
+      "Core Web Vitals",
+      "Informes Mensuales"
+    ]
+  },
+  {
+    title: "Mantenimiento Web",
+    description: "Soporte continuo y actualizaciones para asegurar que tu presencia online nunca se detenga.",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>`,
+    features: [
+      "Backups Diarios",
+      "Soporte 24/7",
+      "Updates de Seguridad",
+      "Monitoreo constante"
+    ]
+  }
+];
+
+const plans = [
+  {
+    name: "Plan Básico",
+    price: "$350",
+    period: "desde",
+    description: "Ideal para profesionales independientes y pequeños negocios.",
+    features: [
+      "Landing Page Personalizada",
+      "Diseño 100% Responsivo",
+      "Optimización SEO Básica",
+      "Hosting & Dominio (1 año)",
+      "Certificado SSL",
+      "Soporte vía Email"
+    ],
+    buttonText: "Elegir Plan",
+    popular: true
+  },
+  {
+    name: "Plan Profesional",
+    price: "$599",
+    period: "desde",
+    description: "Perfecto para empresas que buscan una presencia sólida y funcional.",
+    features: [
+      "Hasta 5 Secciones",
+      "SEO Avanzado",
+      "Integración con RRSS",
+      "Formulario de Contacto",
+      "Optimización de Velocidad",
+      "Soporte Prioritario"
+    ],
+    buttonText: "Elegir Plan",
+    popular: false
+  },
+  {
+    name: "Plan Enterprise",
+    price: "Custom",
+    period: "",
+    description: "Soluciones a medida para proyectos complejos y escalables.",
+    features: [
+      "E-commerce / Tienda Online",
+      "Sistemas de Gestión (Admin)",
+      "Panel de Administración",
+      "Capacitación de Usuario",
+      "Funcionalidades a Medida",
+      "Soporte 24/7"
+    ],
+    buttonText: "Contactar",
+    popular: false
+  }
+];
+---
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="gradient-text">Nuestros Servicios</span>
+      <h2>Lo que podemos hacer por ti</h2>
+    </div>
+    
+    <div class="services-grid">
+      {services.map(service => (
+        <div class={`service-card glass reveal ${service.popular ? 'popular' : ''}`}>
+          {service.popular && <div class="popular-badge">Más Popular</div>}
+          <div class="icon" set:html={service.icon} />
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+          
+          <ul class="features-list">
+            {service.features.map(feature => (
+              <li>
+                <span class="check">✓</span>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a href="#contact" class="btn btn-primary btn-full">Solicitar cotización</a>
+        </div>
+      ))}
+    </div>
+    <div class="pricing-section reveal">
+      <div class="section-header">
+        <span class="gradient-text">Planes de Precios</span>
+        <h2>Elige el plan ideal para tu negocio</h2>
+      </div>
+
+      <div class="pricing-grid">
+        {plans.map(plan => (
+          <div class={`pricing-card glass ${plan.popular ? 'popular' : ''}`}>
+            {plan.popular && <div class="popular-badge">Recomendado</div>}
+            <div class="plan-header">
+              <h3>{plan.name}</h3>
+              <div class="price">
+                {plan.period && <span class="period">{plan.period}</span>}
+                <span class="amount">{plan.price}</span>
+              </div>
+              <p>{plan.description}</p>
+            </div>
+
+            <ul class="plan-features">
+              {plan.features.map(feature => (
+                <li>
+                  <span class="check">✓</span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <a href="#contact" class={`btn ${plan.popular ? 'btn-primary' : 'btn-outline'} btn-full`}>
+              {plan.buttonText}
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header span {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+  }
+
+  .section-header h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .service-card {
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 380px;
+    padding: 3.5rem 2rem 2.5rem;
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .service-card.popular {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    white-space: nowrap;
+    z-index: 20;
+  }
+
+  @media (min-width: 1024px) {
+    .service-card {
+      flex: 0 1 calc(33.33% - 2rem);
+    }
+  }
+
+  .service-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Fixed hover transform for popular card */
+  .service-card.popular:hover {
+    transform: translateY(-15px) scale(1.07);
+    background: rgba(79, 70, 229, 0.1);
+  }
+
+  .service-card:hover .icon {
+    transform: scale(1.1);
+    color: var(--primary);
+  }
+
+  .icon {
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+  }
+
+  .icon :global(svg) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+  }
+
+  .service-card p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+    flex-grow: 1;
+  }
+
+  .features-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .check {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  .btn-full {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  @media (max-width: 768px) {
+    .section-header h2 {
+      font-size: 2.2rem;
+    }
+    .service-card {
+      flex: 1 1 100%;
+      max-width: none;
+      padding: 3rem 1.5rem 2rem;
+    }
+    .service-card.popular:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Pricing Styles */
+  .pricing-section {
+    margin-top: 8rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .pricing-card {
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 380px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .pricing-card.popular {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+    background: rgba(79, 70, 229, 0.1);
+    box-shadow: 0 15px 40px rgba(79, 70, 229, 0.2);
+    z-index: 5;
+  }
+
+  .plan-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .plan-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+  }
+
+  .price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .price .period {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .price .amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary);
+  }
+
+  .plan-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2.5rem 0;
+    flex-grow: 1;
+  }
+
+  .plan-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-main);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Fixed hover for pricing popular */
+  .pricing-card.popular:hover {
+    transform: translateY(-10px) scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .pricing-card.popular {
+      transform: none;
+    }
+    .price .amount {
+      font-size: 2.5rem;
+    }
+  }
+</style>

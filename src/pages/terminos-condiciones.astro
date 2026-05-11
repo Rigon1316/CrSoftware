@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+const title = 'Términos y Condiciones - CRSoftware';
+const pageCss = [];
+---
+<BaseLayout title={title} pageCss={pageCss}>
+  <Nav active="" />
+
+  <section class="page-hero">
+    <div class="page-hero-glow"></div>
+    <div class="container">
+      <span class="section-tag anim-fadeup">Términos y Condiciones</span>
+      <h1 class="section-title anim-fadeup anim-delay-1">Condiciones de uso <span class="grad-text">del servicio</span></h1>
+      <p class="section-sub anim-fadeup anim-delay-2">Lee las reglas básicas para usar nuestros servicios y el sitio web.</p>
+    </div>
+  </section>
+
+  <section class="content-section" style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <div class="card" style="padding: 32px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+        <h2>1. Aceptación</h2>
+        <p>Al usar este sitio o solicitar nuestros servicios, aceptas estas condiciones y nuestra política de privacidad.</p>
+        <h2>2. Servicios</h2>
+        <p>Ofrecemos servicios de desarrollo web, aplicaciones móviles, sistemas ERP y mantenimiento. Toda cotización es una propuesta sujeta a confirmación.</p>
+        <h2>3. Propiedad intelectual</h2>
+        <p>El contenido del sitio y los entregables del proyecto son propiedad de CRSoftware Corporation hasta que se acuerde lo contrario en el contrato.</p>
+        <h2>4. Contacto</h2>
+        <p>Para consultas sobre estos términos, escríbenos a <a href="mailto:crsoftwarecorporation@gmail.com">crsoftwarecorporation@gmail.com</a> o usa WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+</BaseLayout>
