@@ -7,13 +7,13 @@ const projects = [
     tech: ["HTML5", "CSS3", "JavaScript"],
     image: "/projects/gestcore.png",
     link: "https://www.gestcore.com",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-placeholder-icon"><path d="M2 3h20v14H2z"></path><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>`
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-placeholder-icon"><path d="M2 3h20v14H2z"></path><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>`,
+    customClass: "zoom-img"
   },
   {
     title: "Web Corporativa",
-    description: "Presencia profesional y elegante para tu empresa o marca",
-    tags: ["Corporativo", "Diseño"],
-    tech: ["React", "Astro"],
+    description: "Elevamos tu presencia digital con diseños de vanguardia y arquitectura de alto rendimiento, creados para cautivar a tu audiencia desde el primer clic.",
+    creativeTech: "Dominamos el ecosistema moderno: React, Astro, Node.js y más. Construimos el futuro con las herramientas más potentes del mercado.",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-placeholder-icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`
   }
 ];
@@ -31,38 +31,49 @@ const projects = [
         <a href={project.link || "#"} target={project.link ? "_blank" : "_self"} class="project-card reveal" style={`animation-delay: ${index * 0.1}s`}>
           <div class="project-preview">
             {project.image ? (
-              <img src={project.image} alt={project.title} class="project-img" />
+              <img src={project.image} alt={project.title} class={`project-img ${project.customClass || ''}`} />
             ) : (
-              <>
-                <div class="icon-wrapper" set:html={project.icon} />
-                <div class="cta-content">
-                  <span class="cta-text">Construye el tuyo</span>
-                  <span class="cta-button">aquí</span>
-                </div>
-              </>
+              <div class="icon-wrapper" set:html={project.icon} />
             )}
           </div>
           
           <div class="project-info">
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <div class="tags-group">
-              <span class="tags-label">Categoría:</span>
-              <div class="tags">
-                {project.tags.map(tag => (
-                  <span class="tag">{tag}</span>
-                ))}
+            
+            {!project.image && (
+              <div class="cta-inline">
+                <span class="cta-text">Construye el tuyo</span>
+                <span class="cta-button">aquí</span>
               </div>
-            </div>
+            )}
 
-            <div class="tags-group">
-              <span class="tags-label">Tecnologías:</span>
-              <div class="tags">
-                {project.tech.map(t => (
-                  <span class="tag tech">{t}</span>
-                ))}
+            {project.creativeTech ? (
+              <div class="creative-tech-block">
+                <span class="tags-label">Expertise Tecnológica:</span>
+                <p class="creative-tech-text">{project.creativeTech}</p>
               </div>
-            </div>
+            ) : (
+              <>
+                <div class="tags-group">
+                  <span class="tags-label">Categoría:</span>
+                  <div class="tags">
+                    {project.tags?.map(tag => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="tags-group">
+                  <span class="tags-label">Tecnologías:</span>
+                  <div class="tags">
+                    {project.tech?.map(t => (
+                      <span class="tag tech">{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </a>
       ))}
@@ -140,8 +151,59 @@ const projects = [
     transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
-  .project-card:hover .project-img {
-    transform: scale(1.1);
+  .project-img.zoom-img {
+    transform: scale(1.15);
+    object-position: center 20%;
+  }
+
+  .project-card:hover .project-img.zoom-img {
+    transform: scale(1.25);
+  }
+
+  .cta-inline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+  }
+
+  .cta-inline .cta-text {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .cta-inline .cta-button {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 4px 15px var(--primary-glow);
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover .cta-inline .cta-button {
+    background: var(--primary-light);
+    transform: scale(1.05);
+  }
+
+  .creative-tech-block {
+    border-left: 3px solid var(--primary);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .creative-tech-text {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.5;
+    opacity: 0.9;
   }
 
   .icon-wrapper {
