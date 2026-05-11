@@ -18,6 +18,18 @@
         <a href="#contacto" class="btn btn-gradient">Empieza Hoy <span class="arrow">→</span></a>
         <a href="#servicios" class="btn btn-outline-dark">Ver Servicios</a>
       </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat-item">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Satisfacción <br/> Garantizada</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">24/7</span>
+          <span class="stat-label">Soporte <br/> Técnico</span>
+        </div>
+      </div>
     </div>
 
     <div class="hero-visual reveal">
@@ -167,6 +179,46 @@
     border-color: rgba(255, 255, 255, 0.2);
   }
 
+  .hero-stats {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);
+  }
+
   /* Visual Elements */
   .hero-visual {
     position: relative;
@@ -290,6 +342,9 @@
     h1 { font-size: 3.5rem; }
     p { margin: 0 auto 3rem; }
     .hero-actions { justify-content: center; }
+    .hero-stats { justify-content: center; gap: 1.5rem; margin-top: 4rem; flex-wrap: wrap; }
+    .stat-divider { display: none; }
+    .stat-item { flex: 1 1 120px; }
     .hero-visual { display: none; }
     .orbit-container { width: 340px; height: 340px; }
   }
