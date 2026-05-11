@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 const title = 'Términos y Condiciones - CRSoftware';
 const pageCss: string[] = [];
 ---
@@ -10,26 +11,26 @@ const pageCss: string[] = [];
   <section class="page-hero">
     <div class="page-hero-glow"></div>
     <div class="container">
-      <span class="section-tag anim-fadeup">Términos y Condiciones</span>
-      <h1 class="section-title anim-fadeup anim-delay-1">Condiciones de uso <span class="grad-text">del servicio</span></h1>
-      <p class="section-sub anim-fadeup anim-delay-2">Lee las reglas básicas para usar nuestros servicios y el sitio web.</p>
+      <span class="section-tag anim-fadeup">Legal</span>
+      <h1 class="section-title anim-fadeup anim-delay-1">Términos y <span class="grad-text">Condiciones</span></h1>
+      <p class="section-sub anim-fadeup anim-delay-2">Lea detenidamente los términos de uso de nuestros servicios digitales.</p>
     </div>
   </section>
 
-  <section class="content-section" style="padding: 60px 0;">
+  <section class="content-section" style="padding: 20px 0 60px 0;">
     <div class="container" style="max-width: 900px; margin: 0 auto;">
       <div class="card" style="padding: 32px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
         <h2>1. Aceptación</h2>
-        <p>Al usar este sitio o solicitar nuestros servicios, aceptas estas condiciones y nuestra política de privacidad.</p>
-        <h2>2. Servicios</h2>
-        <p>Ofrecemos servicios de desarrollo web, aplicaciones móviles, sistemas ERP y mantenimiento. Toda cotización es una propuesta sujeta a confirmación.</p>
-        <h2>3. Propiedad intelectual</h2>
-        <p>El contenido del sitio y los entregables del proyecto son propiedad de CRSoftware Corporation hasta que se acuerde lo contrario en el contrato.</p>
+        <p>Al acceder a nuestro sitio web y utilizar nuestros servicios, usted acepta cumplir con estos términos y condiciones.</p>
+        <h2>2. Propiedad Intelectual</h2>
+        <p>Todo el contenido, código y diseño desarrollado por CRSoftware Corporation es propiedad exclusiva de la empresa o sus licenciantes.</p>
+        <h2>3. Limitación de Responsabilidad</h2>
+        <p>No nos hacemos responsables por daños indirectos derivados del uso de nuestras plataformas fuera de los acuerdos específicos de mantenimiento.</p>
         <h2>4. Contacto</h2>
-        <p>Para consultas sobre estos términos, escríbenos a <a href="mailto:crsoftwarecorporation@gmail.com">crsoftwarecorporation@gmail.com</a> o usa WhatsApp.</p>
+        <p>Si tiene preguntas sobre estos términos, contáctenos en <a href="mailto:crsoftwarecorporation@gmail.com">crsoftwarecorporation@gmail.com</a>.</p>
       </div>
     </div>
   </section>
 
-  <footer id="footer"></footer>
+  <Footer />
 </BaseLayout>

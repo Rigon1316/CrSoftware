@@ -1,4 +1,6 @@
 ---
+import '../styles/index.css';
+
 interface Props {
   title: string;
   pageCss?: string[];
@@ -15,18 +17,13 @@ const { title, pageCss = [] } = Astro.props as Props;
 
     <title>{title}</title>
 
-    <link rel="stylesheet" href="/css/styles.css" />
-
-    {pageCss.map((href) => (
-      <link rel="stylesheet" href={href} />
-    ))}
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width" />
   </head>
 
   <body>
     <slot />
 
-    <script defer src="/js/main.js"></script>
-    <script defer src="/js/components.js"></script>
   </body>
 
 
