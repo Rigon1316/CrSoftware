@@ -42,7 +42,10 @@ const projects = [
             ) : (
               <>
                 <div class="icon-wrapper" set:html={project.icon} />
-                <span class="placeholder-text">Tu proyecto aquí</span>
+                <div class="cta-content">
+                  <span class="cta-text">Construye el tuyo</span>
+                  <span class="cta-button">aquí</span>
+                </div>
               </>
             )}
           </div>
@@ -131,7 +134,7 @@ const projects = [
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     border-bottom: 1px solid var(--glass-border);
     overflow: hidden;
     position: relative;
@@ -151,6 +154,11 @@ const projects = [
   .icon-wrapper {
     color: var(--primary);
     filter: drop-shadow(0 0 10px var(--primary-glow));
+    transition: transform 0.3s ease;
+  }
+
+  .project-card:hover .icon-wrapper {
+    transform: scale(1.1) translateY(-5px);
   }
 
   .icon-wrapper :global(svg) {
@@ -158,11 +166,43 @@ const projects = [
     height: 3.5rem;
   }
 
-  .placeholder-text {
+  .cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover .cta-content {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  .cta-text {
     color: var(--text-muted);
-    font-size: 1.8rem;
-    font-weight: 400;
-    opacity: 0.5;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .cta-button {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px var(--primary-glow);
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover .cta-button {
+    background: var(--primary-light);
+    box-shadow: 0 6px 20px var(--primary-glow);
+    transform: scale(1.05);
   }
 
   .project-info {

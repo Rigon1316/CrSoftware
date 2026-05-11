@@ -65,25 +65,6 @@ const faqs = [
           Nuestro objetivo es combinar creatividad, tecnología y compromiso para ofrecer proyectos de calidad, adaptados a las necesidades de cada cliente. Buscamos expandir nuestros servicios hacia sistemas ERP, aplicaciones móviles y software empresarial.
         </p>
 
-        <div class="tech-base-container">
-          <h4>Base Tecnológica de este sitio:</h4>
-          <div class="tech-base-grid">
-            <div class="tech-base-item">
-              <span class="t-icon">🌐</span>
-              <div class="t-text">
-                <strong>HTML5 y CSS3</strong>
-                <span>Estructura y diseño 100% responsivo</span>
-              </div>
-            </div>
-            <div class="tech-base-item">
-              <span class="t-icon">⚡</span>
-              <div class="t-text">
-                <strong>JavaScript</strong>
-                <span>Animaciones y menú interactivo</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <a href="#contacto" class="btn btn-gradient">Trabajemos juntos <span class="arrow">→</span></a>
       </div>
@@ -526,61 +507,6 @@ const faqs = [
     line-height: 1.6;
   }
 
-  /* Tech Base Info */
-  .tech-base-container {
-    margin-bottom: 3rem;
-    text-align: left;
-  }
-
-  .tech-base-container h4 {
-    color: white;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.8;
-  }
-
-  .tech-base-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-  }
-
-  .tech-base-item {
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    background: rgba(30, 41, 59, 0.4);
-    padding: 1rem 1.5rem;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
-  }
-
-  .tech-base-item:hover {
-    border-color: rgba(99, 102, 241, 0.3);
-    background: rgba(99, 102, 241, 0.05);
-  }
-
-  .t-icon {
-    font-size: 1.5rem;
-  }
-
-  .t-text {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .t-text strong {
-    color: white;
-    font-size: 1rem;
-  }
-
-  .t-text span {
-    color: #94a3b8;
-    font-size: 0.85rem;
-  }
 
   @media (max-width: 1024px) {
     .about-main { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
@@ -588,8 +514,7 @@ const faqs = [
     .mission-vision-grid { grid-template-columns: 1fr; }
     .diff-grid { grid-template-columns: 1fr; }
     .about-text h2 { font-size: 3rem; }
-    .tech-base-container { display: flex; flex-direction: column; align-items: center; }
-    .tech-base-item { width: 100%; max-width: 400px; text-align: left; }
+    .tech-base-container { display: none; }
   }
 
   /* FAQ Styles */

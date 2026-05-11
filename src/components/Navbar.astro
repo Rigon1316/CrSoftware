@@ -12,13 +12,32 @@
       <li><a href="#contacto" class="btn btn-primary">Contáctanos</a></li>
     </ul>
 
-    <div class="mobile-toggle">
+    <div class="mobile-toggle" id="mobile-toggle">
       <span></span>
       <span></span>
       <span></span>
     </div>
   </div>
 </nav>
+
+<script>
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navbar = document.querySelector('.navbar');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  mobileToggle?.addEventListener('click', () => {
+    mobileToggle.classList.toggle('active');
+    navbar?.classList.toggle('mobile-active');
+  });
+
+  // Close menu when clicking a link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileToggle?.classList.remove('active');
+      navbar?.classList.remove('mobile-active');
+    });
+  });
+</script>
 
 <style>
   .navbar {
@@ -34,10 +53,11 @@
     display: flex;
     align-items: center;
     border-radius: 100px;
-    background: var(--bg-card); /* Adaptable Glass */
+    background: var(--bg-card);
     backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .nav-content {
@@ -75,7 +95,7 @@
     color: var(--text-main);
     opacity: 0.8;
     font-weight: 500;
-    transition: all 0.3s;
+    transition: all 0.3;
     font-size: 0.95rem;
   }
 
@@ -105,30 +125,86 @@
   .mobile-toggle {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     cursor: pointer;
+    z-index: 1001;
+    padding: 5px;
   }
 
   .mobile-toggle span {
     width: 25px;
     height: 2px;
-    background: var(--text-main);
+    background: white;
     border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hamburger Animation */
+  .mobile-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  .mobile-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   @media (max-width: 1024px) {
-    .nav-links {
-      display: none;
-    }
-    .mobile-toggle {
-      display: flex;
-    }
     .navbar {
       width: 95%;
       padding: 0 1.2rem;
+      border-radius: 30px;
     }
+
+    .navbar.mobile-active {
+      height: auto;
+      padding-bottom: 2rem;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1.5rem 0;
+      background: inherit;
+      border-radius: 0 0 24px 24px;
+      gap: 1.5rem;
+      border-top: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+    }
+
+    .navbar.mobile-active .nav-links {
+      display: flex;
+    }
+
+    .mobile-toggle {
+      display: flex;
+    }
+
     .nav-logo {
       height: 35px;
+    }
+
+    .nav-links li {
+      width: 100%;
+      text-align: center;
+    }
+
+    .nav-links a {
+      font-size: 1.1rem;
+      display: block;
+      padding: 0.5rem;
+    }
+
+    .nav-links a.btn-primary {
+      margin: 0 1rem;
     }
   }
 </style>
