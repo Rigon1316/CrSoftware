@@ -1,0 +1,171 @@
+---
+---
+<section class="workflow">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="gradient-text">Nuestra Metodología</span>
+      <h2>Proceso de Trabajo</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+      
+      <div class="timeline-items">
+        <div class="timeline-item reveal">
+          <div class="point-glow"></div>
+          <div class="timeline-content">
+            <span class="step-number">01</span>
+            <h3>Descubrimiento</h3>
+            <p>Reunión estratégica para entender tu idea, objetivos y necesidades específicas del mercado.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="point-glow"></div>
+          <div class="timeline-content">
+            <span class="step-number">02</span>
+            <h3>Diseño & Prototipado</h3>
+            <p>Creamos interfaces UI/UX a medida en Figma, enfocadas en la conversión y experiencia de usuario.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="point-glow"></div>
+          <div class="timeline-content">
+            <span class="step-number">03</span>
+            <h3>Desarrollo</h3>
+            <p>Programación robusta utilizando tecnologías modernas como Astro, React y bases de datos seguras.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="point-glow"></div>
+          <div class="timeline-content">
+            <span class="step-number">04</span>
+            <h3>Despliegue & Optimización</h3>
+            <p>Lanzamiento oficial, pruebas de rendimiento y optimización SEO para garantizar el éxito.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .workflow {
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, 
+      transparent, 
+      rgba(99, 102, 241, 0.3) 10%, 
+      rgba(6, 182, 212, 0.3) 90%, 
+      transparent
+    );
+  }
+
+  .timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 3rem;
+  }
+
+  .timeline-item:nth-child(odd) {
+    align-self: flex-start;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+    align-self: flex-end;
+    text-align: left;
+  }
+
+  .point-glow {
+    position: absolute;
+    top: 4rem;
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--primary-glow);
+    z-index: 2;
+  }
+
+  .timeline-item:nth-child(odd) .point-glow {
+    right: -8px;
+  }
+
+  .timeline-item:nth-child(even) .point-glow {
+    left: -8px;
+  }
+
+  .step-number {
+    font-size: 3rem;
+    font-weight: 900;
+    opacity: 0.1;
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .timeline-content p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-line {
+      left: 20px;
+    }
+    .timeline-item {
+      width: 100%;
+      padding-left: 50px;
+      padding-right: 0;
+      text-align: left !important;
+    }
+    .timeline-item .point-glow {
+      left: 12px !important;
+      top: 3.2rem;
+    }
+    .step-number {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>

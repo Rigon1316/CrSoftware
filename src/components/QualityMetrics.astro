@@ -1,0 +1,189 @@
+---
+---
+<section class="quality-metrics">
+  <div class="container">
+    <div class="metrics-wrapper glass reveal">
+      <div class="metrics-content">
+        <span class="badge-quality">GOOGLE LIGHTHOUSE</span>
+        <h2>No solo hacemos que se vea bien, <br/> <span class="gradient-text">hacemos que vuele.</span></h2>
+        <p>Optimizamos cada línea de código para garantizar que tu sitio cargue instantáneamente, mejorando el SEO y la retención de usuarios.</p>
+      </div>
+
+      <div class="scores-grid">
+        <div class="score-item">
+          <div class="score-circle perf">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            </svg>
+            <span class="score-number">100</span>
+          </div>
+          <span class="score-label">Rendimiento</span>
+        </div>
+
+        <div class="score-item">
+          <div class="score-circle access">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            </svg>
+            <span class="score-number">100</span>
+          </div>
+          <span class="score-label">Accesibilidad</span>
+        </div>
+
+        <div class="score-item">
+          <div class="score-circle seo">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            </svg>
+            <span class="score-number">100</span>
+          </div>
+          <span class="score-label">SEO</span>
+        </div>
+
+        <div class="score-item">
+          <div class="score-circle best">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+              <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            </svg>
+            <span class="score-number">100</span>
+          </div>
+          <span class="score-label">Prácticas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .quality-metrics {
+    padding: 6rem 0;
+    margin-bottom: 4rem;
+  }
+
+  .metrics-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    padding: 4rem;
+    align-items: center;
+    border-radius: 40px;
+    background: rgba(15, 23, 42, 0.4);
+  }
+
+  .badge-quality {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+
+  .metrics-content h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+
+  .metrics-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .scores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .score-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: visible;
+  }
+
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    max-height: 250px;
+    overflow: visible;
+  }
+
+  .circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.05);
+    stroke-width: 2.8;
+  }
+
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    stroke: #22c55e;
+    filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+    animation: progress 2s ease-out forwards;
+  }
+
+  .score-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #22c55e;
+  }
+
+  .score-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 1024px) {
+    .metrics-wrapper {
+      grid-template-columns: 1fr;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .scores-grid {
+      justify-content: center;
+    }
+    .metrics-content h2 {
+      font-size: 2.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .scores-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .score-circle {
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>
