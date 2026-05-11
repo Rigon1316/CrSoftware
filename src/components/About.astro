@@ -1,4 +1,6 @@
 ---
+import { Sparkles, Gem, Rocket } from '@lucide/astro';
+
 const faqs = [
   {
     question: "¿Cuánto tiempo tarda en entregar un proyecto?",
@@ -41,15 +43,15 @@ const faqs = [
           <div class="orbit-ring r3"></div>
 
           <div class="floating-point p1 glass">
-            <span class="icon">✨</span>
+            <span class="icon i-sparkles"><Sparkles size={20} /></span>
             <span class="label">Innovación</span>
           </div>
           <div class="floating-point p2 glass">
-            <span class="icon">💎</span>
+            <span class="icon i-gem"><Gem size={20} /></span>
             <span class="label">Calidad</span>
           </div>
           <div class="floating-point p3 glass">
-            <span class="icon">🚀</span>
+            <span class="icon i-rocket"><Rocket size={20} /></span>
             <span class="label">Escalabilidad</span>
           </div>
         </div>
@@ -371,6 +373,20 @@ const faqs = [
     50% { transform: translate(-15px, -25px); }
   }
 
+  /* Colorful Icons */
+  .i-sparkles {
+    color: #f59e0b;
+    filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));
+  }
+  .i-gem {
+    color: #0ea5e9;
+    filter: drop-shadow(0 0 5px rgba(14, 165, 233, 0.5));
+  }
+  .i-rocket {
+    color: #ef4444;
+    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.5));
+  }
+
   /* About Text */
   .about-text h2 {
     font-size: 4rem;
@@ -512,7 +528,11 @@ const faqs = [
     .about-main { grid-template-columns: 1fr; gap: 4rem; text-align: center; }
     .about-visual { height: 400px; }
     .mission-vision-grid { grid-template-columns: 1fr; }
+    .mv-card { text-align: center; padding: 2.5rem 1.5rem; }
+    .mv-icon { justify-content: center; }
     .diff-grid { grid-template-columns: 1fr; }
+    .diff-item { text-align: center; }
+    .diff-icon { justify-content: center; }
     .about-text h2 { font-size: 3rem; }
     .tech-base-container { display: none; }
   }
