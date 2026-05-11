@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 const title = 'Quiénes Somos - CRSoftware Corporation';
-const pageCss = ['/css/quienes.css'];
+const pageCss: string[] = ['/css/quienes.css'];
 ---
 <BaseLayout title={title} pageCss={pageCss}>
   <Nav active="quienes" />

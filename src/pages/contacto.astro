@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import { Mail, MapPin, Clock, CheckCircle } from '@lucide/astro';
 const title = 'Contáctanos - CRSoftware Corporation';
-const pageCss = ['/css/contacto.css'];
+const pageCss: string[] = ['/css/contacto.css'];
 ---
 <BaseLayout title={title} pageCss={pageCss}>
   <Nav active="" />

@@ -9,12 +9,6 @@ const projects = [
     link: "https://www.gestcore.com",
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-placeholder-icon"><path d="M2 3h20v14H2z"></path><path d="M8 21h8"></path><path d="M12 17v4"></path></svg>`,
     customClass: "zoom-img"
-  },
-  {
-    title: "Web Corporativa",
-    description: "Elevamos tu presencia digital con diseños de vanguardia y arquitectura de alto rendimiento, creados para cautivar a tu audiencia desde el primer clic.",
-    creativeTech: "Dominamos el ecosistema moderno: React, Astro, Node.js y más. Construimos el futuro con las herramientas más potentes del mercado.",
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="project-placeholder-icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`
   }
 ];
 ---
@@ -48,32 +42,23 @@ const projects = [
               </div>
             )}
 
-            {project.creativeTech ? (
-              <div class="creative-tech-block">
-                <span class="tags-label">Expertise Tecnológica:</span>
-                <p class="creative-tech-text">{project.creativeTech}</p>
+            <div class="tags-group">
+              <span class="tags-label">Categoría:</span>
+              <div class="tags">
+                {project.tags?.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
               </div>
-            ) : (
-              <>
-                <div class="tags-group">
-                  <span class="tags-label">Categoría:</span>
-                  <div class="tags">
-                    {project.tags?.map(tag => (
-                      <span class="tag">{tag}</span>
-                    ))}
-                  </div>
-                </div>
+            </div>
 
-                <div class="tags-group">
-                  <span class="tags-label">Tecnologías:</span>
-                  <div class="tags">
-                    {project.tech?.map(t => (
-                      <span class="tag tech">{t}</span>
-                    ))}
-                  </div>
-                </div>
-              </>
-            )}
+            <div class="tags-group">
+              <span class="tags-label">Tecnologías:</span>
+              <div class="tags">
+                {project.tech?.map(t => (
+                  <span class="tag tech">{t}</span>
+                ))}
+              </div>
+            </div>
           </div>
         </a>
       ))}
@@ -104,12 +89,14 @@ const projects = [
   }
 
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 2rem;
   }
 
   .project-card {
+    max-width: 480px;
+    width: 100%;
     background: var(--bg-card);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
